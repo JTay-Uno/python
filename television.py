@@ -1,10 +1,17 @@
 class Television:
+    """
+    A class representing the controls of a TV.
+    """
+
     MIN_VOLUME = 0
     MAX_VOLUME = 2
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
 
     def __init__(self) -> None:
+        """
+        Method that sets the default values for the TV object.
+        """
         self.__status = False
         self.__muted = False
         self.__volume = Television.MIN_VOLUME
@@ -21,7 +28,7 @@ class Television:
 
     def mute(self) -> None:
         """
-        Method to mute the tv volume.
+        Method to mute the TV volume.
         """
         if self.__status:
             if self.__muted:
@@ -31,7 +38,7 @@ class Television:
 
     def channel_up(self) -> None:
         """
-        Method to increase the tv channel.
+        Method to increase the TV channel.
         """
         if self.__status:
             if self.__channel < Television.MAX_CHANNEL:
@@ -41,7 +48,7 @@ class Television:
 
     def channel_down(self) -> None:
         """
-        Method to decrease the tv channel.
+        Method to decrease the TV channel.
         """
         if self.__status:
             if self.__channel > Television.MIN_CHANNEL:
@@ -51,7 +58,7 @@ class Television:
 
     def volume_up(self) -> None:
         """
-        Method to increase the tv volume.
+        Method to increase the TV volume.
         """
         if self.__status:
             self.__muted = False
@@ -60,7 +67,7 @@ class Television:
 
     def volume_down(self) -> None:
         """
-        Method to decrease the tv volume.
+        Method to decrease the TV volume.
         """
         if self.__status:
             self.__muted = False
@@ -69,7 +76,7 @@ class Television:
 
     def __str__(self) -> str:
         """
-        Method to show the tv status.
+        Method to show the TV status.
         :return: tv status.
         """
         if self.__muted:
